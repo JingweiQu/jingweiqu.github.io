@@ -2129,8 +2129,8 @@ input, select, textarea {
 
 		#top .image {
 			border-radius: 100%;
-			width: 13em;
-			height: 13em;
+			width: 12em;
+			height: 12em;
 			margin: 0;
 		}
 
@@ -2168,7 +2168,7 @@ input, select, textarea {
 		}
 
 		#top h1.intro_name {
-			margin-top: 0.2em;
+			margin-top: 0;
 			font-weight: 700;
 			font-size: 1.5em;
 		}
