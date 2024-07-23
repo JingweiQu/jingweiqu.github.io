@@ -2155,7 +2155,7 @@ input, select, textarea {
 
 			#top .image.project {
 				border-radius: 0;
-				width: 48em;
+				width: 50em;
 				height: auto;
 				margin: 0;
 			}
@@ -2190,7 +2190,7 @@ input, select, textarea {
 			margin: 0 0 0.2em 0;
 			font-weight: 700;
 			font-size: 1.2em;
-			text-align: left;
+			text-align: center;
 		}
 
 		#top h1.project_name {
