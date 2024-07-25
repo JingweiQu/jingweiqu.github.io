@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>LPGT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="apple-touch-icon" href="../../images/swu.jpeg" />
+		<link rel="icon" href="../../images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="../../images/swu.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../publication.html">Selected Publications</a></li>
+					<li><a class="active" href="../../project.html">Projects</a></li>
+					<li><a href="../../teaching.html">Teaching</a></li>
+					<li><a href="../../service.html">Professional Activities</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">SWU-AMIL Dataset</h1>
+                    <p style="text-align: center">
+						Southwest University
+						<br>
+						[<a href="https://higa.teracloud.jp/share/11e16e39781d2703" target="_blank">Download</a>]
+					</p>
+                    <hr>
+					<p>
+                        The <b>Appliance Manual Illustration Labels (AMIL)</b> dataset contains high-quality label
+						layouts of illustrations from household appliance manuals. For each illustration, useful label
+						placement information is extracted, including appliance category, label texts, label boxes,
+						anchors, and leader lines. The AMIL dataset contains 869 label layouts across 11 appliance
+						categories, including "air conditioner", "dishwasher", "disinfection cabinet", "fridge",
+						"gas stove", "oven", "panel", "remote", "washer", "water heater", and "water purifier". These
+						layouts are split into <b>695 / 174 samples for training and testing</b>, respectively.
+						On average, each sample contains 9.0 labels, ranging from 1 to 27. In addition, the dataset
+						offers a relatively balanced distribution between samples with fewer than 10 labels
+						(529 samples) and those with 10 or more (340 samples), with a ratio of 1.56:1. Typically, each
+						label is associated with an anchor, but multiple instances of an element each have their own
+						anchor. In the AMIL dataset, 605 samples feature labels each with a single anchor, while the
+						remaining 264 samples include at least one label with multiple anchors, resulting in a ratio of
+						2.29:1.
+					</p>
+					<hr>
+
+					<h1 class="project_item">An illustration with its annotations</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="../LPGT/image/sample.jpg" width="50%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Data statistics of the AMIL dataset</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="../LPGT/image/dataset.png" width="50%" style="margin: auto; display: block" alt=""/>
+						<br>
+						<img src="image/dataset.jpg" width="50%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@article{qu2024graph, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Graph Transformer for Label Placement},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Qu, Jingwei and Zhang, Pingshun and Che, Enyu and Chen, Yinan and Ling, Haibin},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; journal={IEEE Transactions on Visualization and Computer Graphics},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2024}<br>
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>Contact:</b> If you have any questions, please contact Jingwei Qu at qujingwei@swu.edu.cn.
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+	</body>
+</html>
