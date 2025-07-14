@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>EAGM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/images/swu.jpeg" />
+		<link rel="icon" href="/images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="/images/swu.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/ch/index.html">个人主页</a></li>
+					<li><a href="/ch/publication.html">代表成果</a></li>
+					<li><a class="active" href="/ch/project.html">论文详解</a></li>
+					<li><a href="/ch/teaching.html">教学工作</a></li>
+					<li><a href="/ch/service.html">学术服务</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">Adaptive Edge Attention for Graph Matching with Outliers</h1>
+					<p style="text-align: center">
+						<a href="https://jingweiqu.github.io/" target="_blank">瞿经纬</a><sup>1</sup> &nbsp; &nbsp;
+						<a href="https://www3.cs.stonybrook.edu/~hling/" target="_blank">凌海滨</a><sup>2</sup> &nbsp; &nbsp;
+						<a href="https://github.com/zcrwind" target="_blank">张晨睿</a><sup>1</sup> &nbsp; &nbsp;
+						<a href="https://www.icst.pku.edu.cn/xztd/xztd_01/1222609.htm" target="_blank">吕肖庆</a><sup>1</sup> &nbsp; &nbsp;
+						<a href="https://www.wict.pku.edu.cn/cpdp/kydw/ggcy/1297369.htm" target="_blank">汤帜</a><sup>1&lowast;</sup>
+						<br>
+						<sup>1</sup>北京大学 &nbsp; &nbsp; <sup>2</sup>纽约州立大学石溪分校
+						<br>
+						[<a href="/publication/IJCAI-2021.pdf" target="_blank">PDF</a>] &nbsp; &nbsp; [<a href="https://github.com/JingweiQu/EAGM" target="_blank">Code</a>]
+					</p>
+					<hr>
+					<h1 class="project_item">Abstract</h1>
+					<p>
+						Graph matching aims at establishing correspondence between node sets of given graphs while
+						keeping the consistency between their edge sets. However, outliers in practical scenarios
+						and equivalent learning of edge representations in deep learning methods are still challenging.
+						To address these issues, we present an Edge Attention-adaptive Graph Matching (EAGM) network
+						and a novel description of edge features. EAGM transforms the matching relation between two
+						graphs into a node and edge classification problem over their assignment graph. To explore the
+						potential of edges, EAGM learns edge attention on the assignment graph to 1) reveal the impact
+						of each edge on graph matching, as well as 2) adjust the learning of edge representations
+						adaptively. To alleviate issues caused by the outliers, we describe an edge by aggregating the
+						semantic information over the space spanned by the edge. Such rich information provides clear
+						distinctions between different edges (e.g., inlier-inlier edges vs. inlier-outlier edges),
+						which further distinguishes outliers in the view of their associated edges. Extensive
+						experiments demonstrate that EAGM achieves promising matching quality compared with
+						state-of-the-arts, on cases both with and without outliers.
+					</p>
+					<hr>
+					<h1 class="project_item">Architecture of EAGM</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/EAGM/image/architecture.jpg" alt=""/>
+					</span>
+					<hr>
+					<h1 class="project_item">Edge Semantic Feature</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/EAGM/image/edge_feature.jpg" alt=""/>
+					</span>
+					<hr>
+					<h1 class="project_item">Dataset</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/EAGM/image/dataset.jpg" width="80%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+					<h1 class="project_item">Quantitative Results</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/EAGM/image/pascalvoc.png" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Comparison of matching accuracy (%) on Pascal VOC. Numbers in red indicate the best performance.
+					</p>
+					<br>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/EAGM/image/cmuhouse.png" width="70%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Comparison of matching accuracy (%) on CMU House: (a) sampling gap, (b) outlier.
+					</p>
+					<hr>
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@inproceedings{qu2021adaptive, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Adaptive Edge Attention for Graph Matching with Outliers},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Qu, Jingwei and Ling, Haibin and Zhang, Chenrui and Lyu, Xiaoqing and Tang, Zhi},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; booktitle={Proceedings of the International Joint Conference on Artificial Intelligence},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pages={966--972},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2021},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; publisher={IJCAI},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doi={10.24963/ijcai.2021/134}<br>
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>联系方式：</b>如有任何疑问，欢迎通过邮箱qujingwei@swu.edu.cn与瞿经纬联系。
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+	</body>
+</html>

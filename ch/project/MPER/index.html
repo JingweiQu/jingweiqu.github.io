@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>MPER</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/images/swu.jpeg" />
+		<link rel="icon" href="/images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="/images/swu.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/ch/index.html">个人主页</a></li>
+					<li><a href="/ch/publication.html">代表成果</a></li>
+					<li><a class="active" href="/ch/project.html">论文详解</a></li>
+					<li><a href="/ch/teaching.html">教学工作</a></li>
+					<li><a href="/ch/service.html">学术服务</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">Multi-Prototype-based Embedding Refinement for Medical Image Segmentation</h1>
+					<p style="text-align: center">
+						毕雅莉<sup>1</sup> &nbsp; &nbsp;
+						车恩羽<sup>1</sup> &nbsp; &nbsp;
+                        陈怡楠<sup>1</sup> &nbsp; &nbsp;
+                        何垣鹏<sup>2</sup> &nbsp; &nbsp;
+						<a href="https://jingweiqu.github.io/" target="_blank">瞿经纬</a><sup>1&lowast;</sup>
+						<br>
+						<sup>1</sup>西南大学 &nbsp; &nbsp; <sup>2</sup>北京大学
+						<br>
+						[<a href="/publication/ICASSP-2025.pdf" target="_blank">PDF</a>] &nbsp; &nbsp; [<a href="https://github.com/Briley-byl123/MPER" target="_blank">Code</a>]
+					</p>
+					<hr>
+					<h1 class="project_item">Abstract</h1>
+					<p>
+						Medical image segmentation aims to identify anatomical structures at the voxel-level.
+						Segmentation accuracy relies on distinguishing voxel differences. Compared to advancements
+						achieved in studies of the inter-class variance, the intra-class variance receives less
+						attention. Moreover, traditional linear classifiers, limited by a single learnable weight per
+						class, struggle to capture this finer distinction. To address the above challenges, we propose
+						a Multi-Prototype-based Embedding Refinement method for semi-supervised medical image
+						segmentation. Specifically, we design a multi-prototype-based classification strategy,
+						rethinking the segmentation from the perspective of structural relationships between voxel
+						embeddings. The intra-class variations are explored by clustering voxels along the distribution
+						of multiple prototypes in each class. Next, we introduce a consistency constraint to alleviate
+						the limitation of linear classifiers. This constraint integrates different classification
+						granularities from a linear classifier and the proposed prototype-based classifier. In the
+						thorough evaluation on two popular benchmarks, our method achieves superior performance
+						compared with state-of-the-art methods.
+					</p>
+					<hr>
+
+                    <h1 class="project_item">Multi-Prototype-based Classification</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MPER/image/introduction.jpg" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of MPER</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/MPER/image/architecture.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Quantitative Results</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MPER/image/quantitative.png" width="55%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p>
+						Comparison of segmentation quality on the LA dataset. "Labeled" and "Unlabeled" indicate
+						the number and proportion of labeled and unlabeled samples, respectively. Values of four
+						metrics, Dice coefficient, Jaccard index, 95HD, and ASD, are reported. Numbers in bold indicate
+						the best performance.
+					</p>
+					<br>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MPER/image/quantitative2.png" width="55%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Comparison of segmentation quality on the ACDC dataset.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Qualitative Results</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MPER/image/visualization.jpg" width="55%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						3D segmentation visualization on the LA dataset.
+					</p>
+					<br>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MPER/image/visualization2.jpg" width="50%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						2D segmentation visualization on the ACDC dataset.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@inproceedings{bi2025multi, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Multi-Prototype-based Embedding Refinement for Medical Image Segmentation},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Bi, Yali and Che, Enyu and Chen, Yinan and He, Yuanpeng and Qu, Jingwei},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; booktitle={Proceedings of the IEEE International Conference on Acoustics, Speech and Signal
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Processing},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pages={1--5},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2025},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; publisher={IEEE},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address={New York}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doi={10.1109/ICASSP49660.2025.10889249}<br>
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>联系方式：</b>如有任何疑问，欢迎通过邮箱qujingwei@swu.edu.cn与瞿经纬联系。
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+	</body>
+</html>

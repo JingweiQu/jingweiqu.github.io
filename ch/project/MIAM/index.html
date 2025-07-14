@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>MIAM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/images/swu.jpeg" />
+		<link rel="icon" href="/images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="/images/swu.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/ch/index.html">个人主页</a></li>
+					<li><a href="/ch/publication.html">代表成果</a></li>
+					<li><a class="active" href="/ch/project.html">论文详解</a></li>
+					<li><a href="/ch/teaching.html">教学工作</a></li>
+					<li><a href="/ch/service.html">学术服务</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">Multi-granularity Correlation Refinement for Semantic Correspondence</h1>
+					<p style="text-align: center">
+						梁振 &nbsp; &nbsp;
+						车恩羽 &nbsp; &nbsp;
+                        肖国强 &nbsp; &nbsp;
+						<a href="https://jingweiqu.github.io/" target="_blank">瞿经纬</a><sup>&lowast;</sup>
+						<br>
+						西南大学
+						<br>
+						[<a href="/publication/ICME-2024.pdf" target="_blank">PDF</a>] &nbsp; &nbsp; [<a href="https://github.com/JingweiQu/MIAM" target="_blank">Code</a>]
+					</p>
+					<hr>
+					<h1 class="project_item">Abstract</h1>
+					<p>
+						Semantic correspondence aims to establish dense correspondences between semantically similar
+                        images. Multi-level image features have been commonly used in recent studies due to their rich
+                        information. However, this approach poses a challenging problem of how to distinguish the
+                        importance of multiple similarity scores for each candidate match. Moreover, the introduction
+                        of the level dimension increases ambiguous matches. To address these challenges, we develop a
+                        Multi-granularity Inter-level Attention-based Matching (MIAM) network. Specifically,
+                        multi-scale inter-level self-attention, conditioned on correlation patches of various sizes,
+                        is proposed to adjust the effect of similarities from different levels on building
+                        correspondences. Next, we introduce a dual dimensional re-weighting strategy to further
+                        alleviate the ambiguity issue. Based on the convolutional aggregation of the multi-level
+                        scores along the spatial and level dimensions, this strategy strengthens positive matches
+                        while suppressing negative ones. In the thorough evaluation on three semantic correspondence
+                        benchmarks, MIAM achieves competitive performance compared to popular methods.
+					</p>
+					<hr>
+
+                    <h1 class="project_item">Multi-level Correlation Map</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MIAM/image/motivation.jpg" width="70%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of MIAM</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/MIAM/image/architecture.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Multi-granularity Refinement</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/MIAM/image/SLC.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Quantitative Results</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/MIAM/image/quantitative.png" alt=""/>
+					</span>
+					<p>
+						Comparison of PCK@&alpha;<sub>&tau;</sub> (%) on PF-PASCAL, PF-WILLOW, and SPair-71k. Bold and
+						underlined numbers indicate the best and the second best performance, respectively.
+					</p>
+					<br>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MIAM/image/quantitative2.png" width="55%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Memory and run-time comparison.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Qualitative Results</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/MIAM/image/visualize.jpg" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Qualitative results on PF-PASCAL.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@inproceedings{liang2024multi, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Multi-granularity Correlation Refinement for Semantic Correspondence},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Liang, Zhen and Che, Enyu and Xiao, Guoqiang and Qu, Jingwei},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; booktitle={Proceedings of the IEEE International Conference on Multimedia & Expo},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pages={1--6},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2024},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; publisher={IEEE},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address={New York},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doi={10.1109/ICME57554.2024.10687853}<br>
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>联系方式：</b>如有任何疑问，欢迎通过邮箱qujingwei@swu.edu.cn与瞿经纬联系。
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+	</body>
+</html>

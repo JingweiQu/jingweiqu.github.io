@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>LPGT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/images/swu.jpeg" />
+		<link rel="icon" href="/images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="/images/swu.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/ch/index.html">个人主页</a></li>
+					<li><a href="/ch/publication.html">代表成果</a></li>
+					<li><a class="active" href="/ch/project.html">论文详解</a></li>
+					<li><a href="/ch/teaching.html">教学工作</a></li>
+					<li><a href="/ch/service.html">学术服务</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">Graph Transformer for Label Placement</h1>
+					<p style="text-align: center">
+						<a href="https://jingweiqu.github.io/" target="_blank">瞿经纬</a><sup>1</sup> &nbsp; &nbsp;
+                        张平顺<sup>1</sup> &nbsp; &nbsp;
+                        车恩羽<sup>1</sup> &nbsp; &nbsp;
+                        陈怡楠<sup>1</sup> &nbsp; &nbsp;
+						<a href="https://www3.cs.stonybrook.edu/~hling/" target="_blank">凌海滨</a><sup>2&lowast;</sup>
+						<br>
+						<sup>1</sup>西南大学 &nbsp; &nbsp; <sup>2</sup>纽约州立大学石溪分校
+						<br>
+						[<a href="/publication/VIS-2024.pdf" target="_blank">PDF</a>] &nbsp; &nbsp;
+						[<a href="https://github.com/JingweiQu/LPGT" target="_blank">Code</a>] &nbsp; &nbsp;
+						[<a href="https://higa.teracloud.jp/share/11e16e39781d2703" target="_blank">Data</a>]
+					</p>
+					<hr>
+					<h1 class="project_item">Abstract</h1>
+					<p>
+						Placing text labels is a common way to explain key elements in a given scene. Given a graphic
+                        input and original label information, how to place labels to meet both geometric and aesthetic
+                        requirements is an open challenging problem. Geometry-wise, traditional rule-driven solutions
+                        struggle to capture the complex interactions between labels, let alone consider
+                        graphical/appearance content. In terms of aesthetics, training/evaluation data ideally require
+                        nontrivial effort and expertise in design, thus resulting in a lack of decent datasets for
+                        learning-based methods. To address the above challenges, we formulate the task with a graph
+                        representation, where nodes correspond to labels and edges to interactions between labels, and
+                        treat label placement as a node position prediction problem. With this novel representation,
+                        we design a Label Placement Graph Transformer (LPGT) to predict label positions. Specifically,
+                        edge-level attention, conditioned on node representations, is introduced to reveal potential
+                        relationships between labels. To integrate graphic/image information, we design a feature
+                        aligning strategy that extracts deep features for nodes and edges efficiently. Next, to address
+                        the dataset issue, we collect commercial illustrations with professionally designed label
+                        layouts from household appliance manuals, and annotate them with useful information to create
+                        a novel dataset named the Appliance Manual Illustration Labels (AMIL) dataset. In the thorough
+                        evaluation on AMIL, our LPGT solution achieves promising label placement performance compared
+                        with popular baselines.
+					</p>
+					<hr>
+
+					<h1 class="project_item">GNN-driven label placement</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/introduction.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of LPGT</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/architecture.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">The k-th GNN module</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/GNN.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">An illustration with its annotations</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/sample.jpg" width="50%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Data statistics of <a href="https://higa.teracloud.jp/share/11e16e39781d2703" target="_blank">the AMIL dataset</a></h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/dataset.png" width="50%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Quantitative Results</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/quantitative.png" alt=""/>
+					</span>
+					<p>
+						Comparison of label layout quality PCK@0.05 (%) and efficiency on the AMIL dataset. Numbers in
+						bold indicate the best performance.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Qualitative Results</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPGT/image/visualization.jpg" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Qualitative results on the AMIL dataset.
+					</p>
+					<hr>
+
+					<h1 class="project_item">User Study</h1>
+					<span style="margin-left: auto;margin-right: auto" >
+						<img src="/project/LPGT/image/user_study.png" width="70%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Results of the user study: quality scores with 95% confidence intervals.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@article{qu2025graph, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Graph Transformer for Label Placement},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Qu, Jingwei and Zhang, Pingshun and Che, Enyu and Chen, Yinan and Ling, Haibin},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; journal={IEEE Transactions on Visualization and Computer Graphics},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; volume={31}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number={1}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pages={1257-1267}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2025}<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doi={10.1109/TVCG.2024.3456141}<br>
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>联系方式：</b>如有任何疑问，欢迎通过邮箱qujingwei@swu.edu.cn与瞿经纬联系。
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+	</body>
+</html>
