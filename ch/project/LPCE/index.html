@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>LPCE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/images/swu.jpeg" />
+		<link rel="icon" href="/images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="/images/swu.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="/ch/index.html">个人主页</a></li>
+					<li><a href="/ch/publication.html">代表成果</a></li>
+					<li><a class="active" href="/ch/project.html">论文详解</a></li>
+					<li><a href="/ch/teaching.html">教学工作</a></li>
+					<li><a href="/ch/service.html">学术服务</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">Mixture of Cluster-guided Experts for Retrieval-Augmented Label Placement</h1>
+					<p style="text-align: center">
+                        张平顺<sup>1</sup> &nbsp; &nbsp;
+                        车恩羽<sup>1</sup> &nbsp; &nbsp;
+                        陈怡楠<sup>2</sup> &nbsp; &nbsp;
+						<a href="https://bingyaohuang.github.io/" target="_blank">黄兵姚</a><sup>1</sup> &nbsp; &nbsp;
+						<a href="https://www3.cs.stonybrook.edu/~hling/" target="_blank">凌海滨</a><sup>3</sup> &nbsp; &nbsp;
+						<a href="https://jingweiqu.github.io/" target="_blank">瞿经纬</a><sup>1&lowast;</sup>
+						<br>
+						<sup>1</sup>西南大学 &nbsp; &nbsp; <sup>2</sup>浙江大学 &nbsp; &nbsp; <sup>3</sup>西湖大学
+						<br>
+						[<a href="../../publication/VIS-2025.pdf" target="_blank">PDF</a>] &nbsp; &nbsp;
+<!--						[<a href="https://github.com/JingweiQu/LPGT" target="_blank">Code</a>] &nbsp; &nbsp;-->
+<!--						[<a href="https://higa.teracloud.jp/share/11e16e39781d2703" target="_blank">Data</a>]-->
+					</p>
+					<hr>
+					<h1 class="project_item">Abstract</h1>
+					<p>
+						Text labels are widely used to convey auxiliary information in visualization and graphic design. The substantial variability in the categories and structures of labeled objects leads to diverse label layouts. Recent single-model learning-based solutions in label placement struggle to capture fine-grained differences between these layouts, which in turn limits their performance. In addition, although human designers often consult previous works to gain design insights, existing label layouts typically serve merely as training data, limiting the extent to which embedded design knowledge can be exploited. To address these challenges, we propose a mixture of cluster-guided experts (MoCE) solution for label placement. In this design, multiple experts jointly refine layout features, with each expert responsible for a specific cluster of layouts. A cluster-based gating function assigns input samples to experts based on representation clustering. We implement this idea through the Label Placement Cluster-guided Experts (LPCE) model, in which a MoCE layer integrates multiple feed-forward networks (FFNs), with each expert composed of a pair of FFNs. Furthermore, we introduce a retrieval augmentation strategy into LPCE, which retrieves and encodes reference layouts for each input sample to enrich its representations. Extensive experiments demonstrate that LPCE achieves superior performance in label placement, both quantitatively and qualitatively, surpassing a range of state-of-the-art baselines.
+					</p>
+					<hr>
+
+					<h1 class="project_item">MoE-driven label placement with retrieval augmentation</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/introduction.jpg" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of LPCE</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/architecture.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of the RA module</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/RA.jpg" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Five label layout styles. (a)-(e): 1-sided, 2-sided, 3-sided, 4-sided, and contour styles</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/style.jpg" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of the reference feature extractor</a></h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/classification.jpg" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Architecture of the MoCE layer</a></h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/MoCE.jpg" width="50%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Quantitative Results</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/quantitative.png" alt=""/>
+					</span>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/quantitative2.png" width="45%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p>
+						Comparison of label layout quality (PCK@0.05, IoU, LV, Overlap (%)) and efficiency on the SWU-AMIL dataset. Numbers in bold indicate the best performance.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Qualitative Results</h1>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/visualization.jpg" alt=""/>
+					</span>
+					<span class="image project" style="margin-left: auto;margin-right: auto">
+						<img src="/project/LPCE/image/visualization2.jpg" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Qualitative results on the AMIL dataset and four unseen samples.
+					</p>
+					<hr>
+
+					<h1 class="project_item">User Study</h1>
+					<span style="margin-left: auto;margin-right: auto" >
+						<img src="/project/LPCE/image/user_study.png" width="70%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Results of the user study: quality scores with 95% confidence intervals.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@article{zhang2026mixture, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Mixture of Cluster-guided Experts for Retrieval-Augmented Label Placement},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Zhang, Pingshun and Che, Enyu and Chen, Yinan and Huang, Bingyao and Ling, Haibin and Qu, Jingwei},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; journal={IEEE Transactions on Visualization and Computer Graphics},<br>
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; volume={31}<br>-->
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number={1}<br>-->
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pages={1257-1267}<br>-->
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2026}<br>
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doi={10.1109/TVCG.2024.3456141}<br>-->
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>联系方式：</b>如有任何疑问，欢迎通过邮箱qujingwei@swu.edu.cn与瞿经纬联系。
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+	</body>
+</html>
