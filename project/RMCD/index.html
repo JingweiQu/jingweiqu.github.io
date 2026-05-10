@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>RMCD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="apple-touch-icon" href="../../images/swu.jpeg" />
+		<link rel="icon" href="../../images/swu.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="../../images/swu.ico" type="image/x-icon">
+        <script>
+            window.MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../../publication.html">Selected Publications</a></li>
+					<li><a class="active" href="../../project.html">Projects</a></li>
+					<li><a href="../../teaching.html">Teaching</a></li>
+					<li><a href="../../service.html">Professional Activities</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<h1 class="project_name">Relation-Aware Graph Learning with Mixture-of-Experts Prediction for Cognitive Diagnosis</h1>
+					<p style="text-align: center">
+                        <a href="https://jingweiqu.github.io/" target="_blank">Jingwei Qu</a><sup>1</sup> &nbsp; &nbsp;
+                        Mingze Zhang<sup>1</sup> &nbsp; &nbsp;
+                        Pingshun Zhang<sup>1</sup> &nbsp; &nbsp;
+                        Li Tao<sup>1</sup> &nbsp; &nbsp;
+                        Ying Wang<sup>1</sup> &nbsp; &nbsp;
+						Zhaofang Yang</a><sup>1</sup> &nbsp; &nbsp;
+						<a href="https://en.westlake.edu.cn/faculty/haibin-ling.html" target="_blank">Haibin Ling</a><sup>2</sup>
+						<br>
+						<sup>1</sup>Southwest University &nbsp; &nbsp; <sup>2</sup>Westlake University
+						<br>
+<!--						[<a href="../../publication/VIS-2025.pdf" target="_blank">PDF</a>] &nbsp; &nbsp;-->
+<!--						[<a href="https://github.com/PingshunZhang/LPCE" target="_blank">Code</a>]-->
+					</p>
+					<hr>
+					<h1 class="project_item">Abstract</h1>
+					<p>
+						Cognitive diagnosis aims to infer students’ concept-level mastery from their exercise response logs and exercise-concept associations. Fully leveraging holistic heterogeneous relations and modeling the substantial variations in student mastery and exercise difficulty remain challenging, especially when prediction relies on a single predictor. To address these challenges, we propose RMCD, a unified cognitive diagnosis model that integrates relation-aware graph learning with Mixture-of-Experts (MoE) prediction. RMCD constructs a heterogeneous relational graph over students, exercises, and concepts with multiple relation types, and employs a relation-aware graph encoder that learns node and edge representations simultaneously. The encoder further derives relation-strength vectors from student-concept and exercise-concept edges to differentiate relation effects and refine node representations, enabling effective relation learning. On top of the learned representations, RMCD introduces an MoE-based prediction head that adaptively combines multiple expert predictors conditioned on the three-entity representations, thereby capturing diverse mastery-difficulty discrepancies and alleviating the limitation of a unified predictor. Extensive experiments on benchmark datasets demonstrate that RMCD consistently outperforms state-of-the-art cognitive diagnosis methods.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Conceptual illustration of RMCD</h1>
+					<span style="margin-left: auto;margin-right: auto">
+						<img src="image/introduction.jpg" width="80%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+                    <h1 class="project_item">Architecture of RMCD</h1>
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/architecture.jpg" width="100%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<hr>
+
+					<h1 class="project_item">Quantitative Results</h1>
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/quantitative.png" width="100%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p>
+						Comparison of cognitive diagnosis performance on the ASSIST17, ASSIST09, and Junyi datasets. All metrics are reported in %; lower RMSE and higher ACC/AUC are better. Numbers in bold indicate the best performance.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Ablation Study</h1>
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/metrics_3x3.jpg" width="70%" style="margin: auto; display: block" alt=""/>
+					</span>
+                    <p style="text-align: center">
+						Ablation study of the MoE head and the regularizer \(\mathcal{L}_r\).
+					</p>
+					<br>
+
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/ablation1.png" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Ablation study of the relation-aware graph encoder depth on ASSIST17 (w/o MoE).
+					</p>
+                    <br>
+
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/ablation2.png" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Ablation study of the sub-layer roles on ASSIST17.
+					</p>
+                    <br>
+
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/ablation3.png" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Ablation study of the sub-layer order on ASSIST17.
+					</p>
+                    <br>
+
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/ablation4.png" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Ablation study of the gating input on ASSIST17.
+					</p>
+                    <br>
+
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/auc_three_subplots.jpg" width="100%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Ablation study of the key hyperparameters \(n_l\), \(\lambda\), and \(n_e\).
+					</p>
+                    <br>
+
+                    <span style="margin-left: auto;margin-right: auto">
+						<img src="image/ablation5.png" width="60%" style="margin: auto; display: block" alt=""/>
+					</span>
+					<p style="text-align: center">
+						Efficiency comparison between baselines and RMCD with different numbers of experts on ASSIST09.
+					</p>
+					<hr>
+
+					<h1 class="project_item">Reference</h1>
+					<table>
+						<tr>
+							<td>
+								<code>
+								@inproceedings{qu2026relation, <br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; title={Relation-Aware Graph Learning with Mixture-of-Experts Prediction for Cognitive Diagnosis},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Qu, Jingwei and Zhang, Mingze and Zhang, Pingshun and Tao, Li and Wang, Ying and Yang, Zhaofang and Ling, Haibin},<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; booktitle={Proceedings of the International Joint Conference on Artificial Intelligence},<br>
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pages={966&#45;&#45;972},<br>-->
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2026}<br>
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; publisher={IJCAI},<br>-->
+<!--									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doi={10.24963/ijcai.2021/134}<br>-->
+								}
+								</code>
+							</td>
+						</tr>
+					</table>
+					<hr>
+					<footer>
+						<b>Contact:</b> If you have any questions, please contact Jingwei Qu at qujingwei@swu.edu.cn.
+					</footer>
+					<hr style="margin-bottom: 0">
+				</div>
+			</article>
+
+	<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+	</body>
+</html>
